@@ -1,0 +1,202 @@
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    color: #333;
+    line-height: 1;
+}
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header .hd_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 120px;
+
+}
+
+.header .gnb {}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 48px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    color: #fff;
+    white-space: nowrap;
+    line-height: 120px;
+}
+
+.header .gnb>ul>li ul {
+    position: absolute;
+    top: 96px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    display: none;
+
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.header .gnb>ul>li:hover ul {
+    display: block;
+}
+
+
+.header .gnb>ul>li ul a {
+    display: block;
+    color: #fff;
+    white-space: nowrap;
+    line-height: 40px;
+    padding: 0 40px;
+    font-size: 14px;
+
+}
+
+.header .gnb>ul>li ul li~li a {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.main_visual {}
+
+.main_visual .main_visual_slide {}
+
+.main_visual .main_visual_slide .itm {
+    position: relative;
+    height: 100vh;
+}
+
+.main_visual .main_visual_slide .itm::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: #000;
+    opacity: 0.4;
+}
+
+.main_visual .main_visual_slide .itm01 {
+    background: url(../images/main_visual_img01.jpg)no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .itm02 {
+    background: url(../images/main_visual_img02\ .jpg)no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .itm03 {
+    background: url(../images/main_visual_img3\ .jpg)no-repeat center center/cover;
+}
+
+
+.main_visual .main_visual_slide .itm .slg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_visual .main_visual_slide .itm .slg strong {
+    display: block;
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+}
+
+.main_visual .main_visual_slide .itm .slg p {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+
+.main_visual .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+
+    width: calc(100% - 48px);
+}
+
+.main_visual .arrows button {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    width: 120px;
+    height: 120px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    cursor: pointer;
+}
+
+.main_visual .arrows button .icon {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    stroke-width: 1px;
+
+}
+
+
+.main_visual .arrows .prev {
+    left: 0;
+}
+
+.main_visual .arrows .next {
+    right: 0;
+}
+
+.main_visual .page {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-50%, 0);
+
+    width: auto;
+}
+
+.main_visual .page span {
+    width: 40px;
+    height: 4px;
+    opacity: 1;
+    border-radius: 0;
+
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.main_visual .page span.swiper-pagination-bullet-active {
+    background: hwb(9 28% 0%);
+}
